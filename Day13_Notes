@@ -1,0 +1,28 @@
+=======DAY_13=====
+Oct 12, 2021
+****What do you remember from the last class?
+***Page Object Model?
+  -What is POM
+   -It is a framework design pattern
+   -We separate page objects and action test cases.
+   -We store page objects in a different class and we use them in test classes
+      -We use @FindBy annotation to locate the page object in page class
+   -PaceFactory : It is used in constructor in the pages to instantiate the objects
+   Why POM ?
+       -Reusability
+       -Easy maintenance
+       -Readability
+       -Time saver
+
+How to write xpath from table elements
+TABLE
+//table//tbody -> to create table body. returns entire table
+//table//tbody//tr -> returns all rows in tbody
+//table//tbody//tr[1] -> first row in tbody
+//table//tbody//tr[1]//td -> returns all table cells on the first row
+//table//tbody//tr[1]//td[4] -> returns 4th cell on the first row in tbody
+//table//tbody//tr[4]//td[5] -> 4th row 5th column
+//table//tbody//tr[10]//td[2] -> row 10 cell 2
+
+NO tc in web tables. We have tr or td. We use combination of tr and td to fo certain column
+//table//tbody//tr//td[5] -> all rows in column 5
