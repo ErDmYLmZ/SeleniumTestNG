@@ -95,8 +95,8 @@ public class Day13_WebTables {
              }
             @Test  //Create a test method: printColumns() and print Find the total number of columns and Print the elements of the 5th column
             public void printColumns(){
-                     List<WebElement>allHeadres=Driver.getDriver().findElements(By.xpath("//th"));
-                     int numberOfColumns=allHeadres.size();
+                     List<WebElement>allHeaders=Driver.getDriver().findElements(By.xpath("//th"));
+                     int numberOfColumns=allHeaders.size();
                 System.out.println("There are "+numberOfColumns+" columns.");
 
                 //       Print the elements of the 5th column
@@ -109,10 +109,23 @@ public class Day13_WebTables {
 
                  }
 
-//    Create a test method: printData(int row, int column);
-//    This method should print the given cell.
-//    Example: printData(2,3); should print 2nd row,3rd column
 
+
+           @Test
+           public void printRow_Col(){
+            //    This method should print the given cell.
+                printData(2,3);//==>2.row and 3.column refers to :111
+                printData(4,4);//==>4.row and 4.column refers to :asdf
+                printData(6,1);//==>6.row and 1.column refers to :21
+            }
+
+            public void printData(int row,int column) {
+            //    Create a test method: printData(int row, int column);
+
+                WebElement printData = Driver.getDriver().findElement(By.xpath("//table//tbody//tr["+row+"]//td["+column+"]"));
+                System.out.println(row + ".row and " + column + ".column refers to :" + printData.getText());
+            }
+            //    Example: printData(2,3); should print 2nd row,3rd column
 
             @AfterMethod
             public void tearDown(){

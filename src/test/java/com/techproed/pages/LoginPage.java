@@ -20,6 +20,12 @@ public class LoginPage {
 
         @FindBy(xpath="//div[@id='divMessageResult']")
         public WebElement errorMessage;
+
+        @FindBy(id="details-button")
+        public WebElement advancedLink;
+
+        @FindBy(id="proceed-link")
+        public WebElement proceedLink;
     }
 
 
