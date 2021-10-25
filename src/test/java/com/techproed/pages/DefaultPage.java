@@ -24,5 +24,8 @@ public class DefaultPage {
     @FindBy(xpath = "(//span)[contains(@class,'username')]")
     public WebElement userID;
 
+    @FindBy(className = "page-title")
+    public WebElement crntdate;
+
 
 }
