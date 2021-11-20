@@ -13,7 +13,7 @@ public class Day16_DataProvider2 {
      *Create a data as 2D object array in getData method
      */
 
-    @DataProvider
+    @DataProvider(parallel = true)
     public Object[][] getData(){
         Object [][] managerProfile= {
                 {"manager","Manager1!"},

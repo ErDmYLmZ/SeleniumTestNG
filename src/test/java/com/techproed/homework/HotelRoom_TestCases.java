@@ -1,5 +1,6 @@
 package com.techproed.homework;
 
+import com.github.javafaker.DateAndTime;
 import com.github.javafaker.Faker;
 import com.techproed.pages.DefaultPage;
 import com.techproed.pages.HotelListPage;
@@ -24,6 +25,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 import java.util.concurrent.TimeUnit;
@@ -102,6 +104,7 @@ public class HotelRoom_TestCases {
         String  websiteDate = defaultPage.crntdate.getText();
         DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd MMMM yyyy");
         LocalDate now =LocalDate.now();
+
         Assert.assertEquals(websiteDate,dateTimeFormatter.format(now));
 
     }

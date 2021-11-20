@@ -13,7 +13,7 @@ public class Day16_DataProvider1 {
 
     //  Create a method to get data from DataProvider
     //  Return type of the method is 2D Object Array
-    @DataProvider
+    @DataProvider(parallel = true)
     public Object[][] getData(){
 //                manager   Manager1!
 //                manager2  Manager2!
